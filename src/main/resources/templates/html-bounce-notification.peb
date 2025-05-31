@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Bounce Notification</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+        .header {
+            background-color: #d9534f;
+            color: white;
+            padding: 10px;
+        }
+        .section {
+            margin: 20px 0;
+        }
+        .recipient-list {
+            background-color: #f8f8f8;
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+        .recipient {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <h2>Bounce Notification</h2>
+</div>
+
+<div class="section">
+    <strong>Message ID:</strong> {{ mail.messageId }}
+</div>
+
+<div class="section">
+    <strong>Bounce Type:</strong> {{ bounce.bounceType }}
+</div>
+
+<div class="section">
+    <strong>Bounce Sub Type:</strong> {{ bounce.bounceSubType }}
+</div>
+
+{% if bounce.bouncedRecipients is defined and bounce.bouncedRecipients is not empty %}
+<div class="section">
+    <strong>Bounced Recipients:</strong>
+    <div class="recipient-list">
+        {% for recipient in bounce.bouncedRecipients %}
+            <div class="recipient">
+                {{ recipient.emailAddress }}
+    {% if recipient.status %} - {{ recipient.status }}{% endif %}
+    {% if recipient.action %} ({{ recipient.action }}){% endif %}
+            </div>
+        {% endfor %}
+    </div>
+</div>
+{% endif %}
+
+</body>
+</html>

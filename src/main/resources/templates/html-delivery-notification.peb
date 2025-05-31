@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Delivery Notification</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+        .header {
+            background-color: #008000;
+            color: white;
+            padding: 10px;
+        }
+        .section {
+            margin: 20px 0;
+        }
+        .recipient-list {
+            background-color: #f8f8f8;
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+        .recipient {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <h2>Delivery Notification</h2>
+</div>
+
+<div class="section">
+    <strong>Message ID:</strong> {{ mail.messageId }}
+</div>
+
+
+{% if delivery.recipients is defined and delivery.recipients is not empty %}
+<div class="section">
+    <strong>Delivery Recipients:</strong>
+    <div class="recipient-list">
+        {% for recipient in delivery.recipients %}
+            <div class="recipient">
+                {{ recipient }}
+            </div>
+        {% endfor %}
+    </div>
+</div>
+{% endif %}
+
+</body>
+</html>

@@ -1,0 +1,20 @@
+Bounce Notification
+
+Message ID: {{ mail.messageId }}
+
+Bounce Type: {{ bounce.bounceType }}
+
+Bounce Sub Type: {{ bounce.bounceSubType }}
+
+{% if bounce.bouncedRecipients is defined and bounce.bouncedRecipients is not empty %}
+
+Bounced Recipients:
+
+{% for recipient in bounce.bouncedRecipients %}
+    {{ recipient.emailAddress }}
+    {% if recipient.status %} - {{ recipient.status }}{% endif %}
+    {% if recipient.action %} ({{ recipient.action }}){% endif %}
+
+{% endfor %}
+
+{% endif %}

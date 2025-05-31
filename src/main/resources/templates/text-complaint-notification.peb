@@ -1,0 +1,19 @@
+Complaint Notification
+
+Message ID: {{ mail.messageId }}
+
+{% if complaint.complaintFeedbackType is defined %}
+Complaint Feedback Type: {{ complaint.complaintFeedbackType }}
+
+{% endif %}
+
+{% if complaint.complainedRecipients is defined and complaint.complainedRecipients is not empty %}
+
+Complained Recipients:
+
+{% for recipient in complaint.complainedRecipients %}
+{{ recipient.emailAddress }}
+    
+{% endfor %}
+
+{% endif %}

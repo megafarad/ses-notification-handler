@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Complaint Notification</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+        .header {
+            background-color: #d9534f;
+            color: white;
+            padding: 10px;
+        }
+        .section {
+            margin: 20px 0;
+        }
+        .recipient-list {
+            background-color: #f8f8f8;
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+        .recipient {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <h2>Complaint Notification</h2>
+</div>
+
+<div class="section">
+    <strong>Message ID:</strong> {{ mail.messageId }}
+</div>
+
+{% if complaint.complaintFeedbackType is defined %}
+<div class="section">
+    <strong>Complaint Feedback Type: </strong> {{ complaint.complaintFeedbackType }}
+</div>
+{% endif %}
+
+
+{% if complaint.complainedRecipients is defined and complaint.complainedRecipients is not empty %}
+<div class="section">
+    <strong>Complained Recipients:</strong>
+    <div class="recipient-list">
+        {% for recipient in complaint.complainedRecipients %}
+            <div class="recipient">
+                {{ recipient.emailAddress }}
+            </div>
+        {% endfor %}
+    </div>
+</div>
+{% endif %}
+
+</body>
+</html>

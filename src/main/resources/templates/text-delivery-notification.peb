@@ -1,0 +1,14 @@
+Delivery Notification
+
+Message ID: {{ mail.messageId }}
+
+{% if delivery.recipients is defined and delivery.recipients is not empty %}
+
+Delivery Recipients:
+
+{% for recipient in delivery.recipients %}
+{{ recipient }}
+
+{% endfor %}
+
+{% endif %}
