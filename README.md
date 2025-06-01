@@ -34,7 +34,7 @@ This project helps organizations maintain email deliverability by automatically 
 
 1. Clone the repository:
 ```bash
-git clone <repository-url>
+git clone https://github.com/megafarad/ses-notification-handler.git
 cd ses-notification-handler
 ```
 
