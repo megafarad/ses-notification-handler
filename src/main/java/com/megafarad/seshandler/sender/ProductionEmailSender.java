@@ -6,21 +6,21 @@ import software.amazon.awssdk.services.ses.model.*;
 /**
  * ProductionEmailSender is a concrete implementation of the EmailSender interface,
  * responsible for sending emails using Amazon Simple Email Service (SES).
- *
+ * <p>
  * This class integrates with AWS SDK for Java to send emails by constructing
  * and sending a request to Amazon SES. It supports both HTML and plain text email
  * formats and allows specifying the sender and recipient email addresses, subject,
  * and content.
- *
+ * <p>
  * Features:
  * - Sends emails using Amazon SES via the SES client from the AWS SDK.
  * - Supports constructing email messages with a subject, HTML content, and plain text content.
  * - Encapsulates the logic for sending emails to decouple email-sending logic
  *   from other application components.
- *
- * This class uses a `SesClient` instance to communicate with Amazon SES. The `SesClient`
+ * <p>
+ * This class uses an `SesClient` instance to communicate with Amazon SES. The `SesClient`
  * is created during the instantiation of the class.
- *
+ * <p>
  * Typical use cases include:
  * - Sending application notifications via email.
  * - Integrating email delivery features into applications using AWS SES.

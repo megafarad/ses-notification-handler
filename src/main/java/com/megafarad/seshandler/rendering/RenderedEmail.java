@@ -4,7 +4,7 @@ package com.megafarad.seshandler.rendering;
 /**
  * Represents a fully rendered email, containing the generated subject,
  * HTML body, and plain text body.
- *
+ * <p>
  * Instances of this class are typically produced as a result of rendering
  * email templates with specified context data in an implementation of
  * RenderingService.

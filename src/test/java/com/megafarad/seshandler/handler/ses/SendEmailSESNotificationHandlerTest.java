@@ -13,7 +13,6 @@ import org.junit.jupiter.api.Test;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 
-import static com.megafarad.seshandler.utils.EnvVar.getEnvVar;
 import static com.megafarad.utils.SESNotificationParser.parseNotification;
 import static org.mockito.Mockito.*;
 

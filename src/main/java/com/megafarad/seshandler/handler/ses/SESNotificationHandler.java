@@ -8,12 +8,12 @@ import com.megafarad.seshandler.model.SESNotification;
  * The SESNotificationHandler interface defines a contract for handling
  * notifications from Amazon Simple Email Service (SES). Implementations of
  * this interface should provide the logic to process various SES notifications.
- *
+ * <p>
  * SES notifications can include events such as:
  * - Bounce notifications: indicating issues with email delivery.
  * - Complaint notifications: indicating recipients marking emails as spam or unwanted.
  * - Delivery notifications: confirming successful email delivery.
- *
+ * <p>
  * The handleNotification method is invoked to process a given notification and
  * provides the corresponding AWS Lambda execution context information.
  */

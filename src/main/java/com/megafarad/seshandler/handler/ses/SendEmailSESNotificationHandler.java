@@ -20,7 +20,7 @@ import java.util.stream.Collectors;
  * A handler for processing Amazon SES notifications such as bounce, complaint,
  * and delivery events. This handler generates email notifications based on
  * predefined templates and sends them to a designated recipient.
- *
+ * <p>
  * This class extends {@link AbstractSESNotificationHandler}, overriding methods
  * to handle specific SES notification types: bounce, complaint, and delivery.
  * Emails are rendered using templates managed by the {@link PebbleEngine} and
@@ -47,7 +47,7 @@ public class SendEmailSESNotificationHandler extends AbstractSESNotificationHand
      * Constructs a SendEmailSESNotificationHandler instance and initializes its internal
      * components, including email sender, rendering service, and templates for handling
      * various email events such as bounces, complaints, and deliveries.
-     *
+     * <p>
      * This constructor performs the following actions:
      * - Configures an email sender instance using a production-ready implementation.
      * - Sets up a rendering service for processing email templates.
@@ -57,7 +57,7 @@ public class SendEmailSESNotificationHandler extends AbstractSESNotificationHand
      * - Initializes subject templates for the different types of email notifications.
      * - Retrieves sender and recipient email addresses from mandatory environment
      *   variables.
-     *
+     * <p>
      * The templates and email addresses are utilized during the processing of
      * SES (Simple Email Service) notifications to compose and send appropriate
      * email responses.

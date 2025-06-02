@@ -14,12 +14,12 @@ import com.megafarad.seshandler.model.SESNotification;
  * events. It is designed to handle SNS messages containing Amazon Simple Email Service (SES)
  * notifications and delegates their processing to an implementation of the SESNotificationHandler
  * interface.
- *
+ * <p>
  * The handler:
  * - Deserializes SNS messages into SESNotification objects using Jackson ObjectMapper.
  * - Dispatches the SESNotification objects to an SESNotificationHandler for processing.
  * - Handles errors during message processing and logs failure details.
- *
+ * <p>
  * This class is configured at runtime to use a specific SESNotificationHandler
  * implementation. The implementation is determined by the environment variable
  * `SES_NOTIFICATION_HANDLER_CLASS`. If the variable is not set or is blank,
@@ -33,14 +33,14 @@ public class SNSMessageHandler implements RequestHandler<SNSEvent, Void> {
     /**
      * Constructs an instance of SNSMessageHandler and initializes the SESNotificationHandler
      * implementation to process Amazon Simple Email Service (SES) notifications.
-     *
+     * <p>
      * This constructor determines the specific SESNotificationHandler implementation to be used
      * based on the `SES_NOTIFICATION_HANDLER_CLASS` environment variable. If the variable is not
      * set or is blank, a default handler implementation, LoggingSESNotificationHandler, is used.
-     *
+     * <p>
      * The SESNotificationHandler is responsible for handling notifications such as bounce,
      * complaint, and delivery events.
-     *
+     * <p>
      * The constructor encapsulates the loading and instantiation logic of the handler to ensure
      * flexibility and configurability during runtime.
      */

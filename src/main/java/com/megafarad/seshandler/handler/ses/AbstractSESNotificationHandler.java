@@ -6,11 +6,11 @@ import com.megafarad.seshandler.model.*;
 /**
  * AbstractSESNotificationHandler provides a base implementation of the SESNotificationHandler
  * interface for handling different types of Amazon Simple Email Service (SES) notifications.
- *
+ * <p>
  * This abstract class defines a generic method for handling SES notifications by dispatching
  * the processing to specialized methods based on the notification type. Subclasses can override
  * these specialized methods to provide custom handling logic for each type of notification.
- *
+ * <p>
  * Notification types supported include Bounce, Complaint, and Delivery notifications.
  */
 public abstract class AbstractSESNotificationHandler implements SESNotificationHandler {

@@ -5,7 +5,7 @@ import java.util.List;
 /**
  * Represents the details of a bounce notification from Amazon Simple Email Service (SES).
  * A bounce occurs when an email cannot be delivered to one or more recipients.
- *
+ * <p>
  * This record encapsulates the following key information about a bounce event:
  *
  * @param bounceType The type of bounce (e.g., Permanent, Transient).

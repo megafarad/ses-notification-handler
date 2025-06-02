@@ -6,7 +6,7 @@ package com.megafarad.seshandler.model;
  * This record serves as a wrapper for various types of notifications, including bounce,
  * complaint, and delivery notifications, as well as metadata about the original
  * email message.
- *
+ * <p>
  * The record encapsulates the following components:
  *
  * @param notificationType  The type of notification (e.g., bounce, complaint, delivery).

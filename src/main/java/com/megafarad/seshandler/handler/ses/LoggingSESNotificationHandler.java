@@ -11,13 +11,13 @@ import com.megafarad.seshandler.model.Mail;
  * a concrete implementation for handling Amazon Simple Email Service (SES) notifications.
  * This class logs information about the bounce, complaint, and delivery events using
  * the logging facility provided by the AWS Lambda execution context.
- *
+ * <p>
  * The class overrides specific methods from AbstractSESNotificationHandler to include
  * logging functionality for each type of notification:
  * - Bounce notifications are logged with details about the bounce event.
  * - Complaint notifications are logged with details about the complaint event.
  * - Delivery notifications are logged with details about the delivery event.
- *
+ * <p>
  * The logging can be useful for debugging, monitoring, or storing metrics regarding
  * the SES notifications received.
  */
